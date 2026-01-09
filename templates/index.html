@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Recommendation System</title>
+</head>
+<body>
+    <h1>Mobile Recommendation System 🚀</h1>
+    <p>Select your preferences to get recommendations</p>
+
+    <form action="/recommend" method="post">
+        <label>Budget (₹):</label><br>
+        <input type="number" name="budget" required><br><br>
+
+        <label>Minimum RAM (GB):</label><br>
+        <input type="number" name="ram" required><br><br>
+
+        <label>Usage:</label><br>
+        <select name="usage">
+            <option value="student">Student</option>
+            <option value="gaming">Gaming</option>
+            <option value="office">Office</option>
+        </select><br><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
