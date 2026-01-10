@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
     <meta charset="UTF-8">
     <title>Mobile Recommendation System</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Mobile Recommendation System 🚀</h1>
-    <p>Select your preferences to get recommendations</p>
 
-    <form action="/recommend" method="post">
-        <label>Budget (₹):</label><br>
-        <input type="number" name="budget" required><br><br>
+    <h2 style="text-align:center;">📱 Mobile Recommendation System</h2>
 
-        <label>Minimum RAM (GB):</label><br>
-        <input type="number" name="ram" required><br><br>
+    <div style="max-width:400px; margin:0 auto; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
 
-        <label>Usage:</label><br>
-        <select name="usage">
-            <option value="student">Student</option>
-            <option value="gaming">Gaming</option>
-            <option value="office">Office</option>
-        </select><br><br>
+        <form action="/recommend" method="post" onsubmit="showLoader()">
 
-        <button type="submit">Get Recommendations</button>
-    </form>
+            <label><strong>Budget (₹)</strong></label>
+            <input type="number" name="budget" required style="width:100%; padding:8px; margin-bottom:15px;">
+
+            <label><strong>Minimum RAM (GB)</strong></label>
+            <input type="number" name="ram" required style="width:100%; padding:8px; margin-bottom:15px;">
+
+            <label><strong>Usage</strong></label>
+            <select name="usage" style="width:100%; padding:8px; margin-bottom:20px;">
+                <option value="student">Student</option>
+                <option value="gaming">Gaming</option>
+                <option value="office">Office</option>
+            </select>
+
+            <button type="submit" style="width:100%; padding:10px; background:#2c7be5; color:white; border:none; border-radius:5px; font-size:16px; cursor:pointer;">
+                Get Recommendations
+            </button>
+        </form>
+
+        <!-- Loader -->
+        <div id="loader" style="display:none; text-align:center; margin-top:20px;">
+            <p>🔍 Finding best mobiles for you...</p>
+        </div>
+
+    </div>
+
+    <!-- Loader Script -->
+    <script>
+        function showLoader() {
+            document.getElementById("loader").style.display = "block";
+        }
+    </script>
+
 </body>
 </html>

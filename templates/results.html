@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Recommended Mobiles</title>
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -13,12 +15,25 @@
     <div class="container">
         {% for mobile in mobiles %}
             <div class="card">
+
+                {% if loop.index == 1 %}
+                    <span class="badge">Top Pick ⭐</span>
+                {% endif %}
+
                 <img src="{{ mobile.image }}" alt="{{ mobile.model }}">
+
                 <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
+
                 <p class="price">₹{{ mobile.price }}</p>
+
                 <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
+
                 <p>⭐ {{ mobile.rating }}</p>
-                <p class="reason"><em>Why recommended:</em> {{ mobile.reason }}</p>
+
+                <p class="reason">
+                    <em>Why recommended:</em> {{ mobile.reason }}
+                </p>
+
             </div>
         {% endfor %}
     </div>
