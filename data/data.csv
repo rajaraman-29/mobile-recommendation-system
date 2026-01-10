@@ -1,0 +1,18 @@
+brand,model,price,ram,storage,usage,rating
+Samsung,Galaxy A14,13999,4,64,student,4.1
+Redmi,Note 12,15999,6,128,student,4.2
+Realme,Narzo 60,17999,8,128,student,4.3
+Motorola,G34,18999,8,128,student,4.2
+Infinix,Zero 5G,19999,8,128,student,4.1
+
+iQOO,Z6,24999,8,128,gaming,4.4
+Poco,X5 Pro,23999,8,256,gaming,4.3
+Realme,GT Neo 3,28999,12,256,gaming,4.5
+Asus,ROG Phone 6,49999,12,256,gaming,4.6
+Samsung,Galaxy S21 FE,39999,8,256,gaming,4.6
+
+OnePlus,Nord CE 3,26999,8,128,office,4.5
+Samsung,Galaxy S23,74999,8,256,office,4.7
+Apple,iPhone 13,59999,4,128,office,4.7
+Apple,iPhone 14,69999,6,128,office,4.8
+Google,Pixel 7,59999,8,128,office,4.6
