@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Recommended Mobiles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <h2>Recommended Mobiles 📱</h2>
+<h2>Recommended Mobiles 📱</h2>
 
-    {% if mobiles %}
+{% if mobiles %}
+    <div class="container">
         {% for mobile in mobiles %}
-            <div style="margin-bottom: 20px;">
-                <strong>{{ mobile.brand }} {{ mobile.model }}</strong><br>
-                Price: ₹{{ mobile.price }}<br>
-                RAM: {{ mobile.ram }} GB<br>
-                Storage: {{ mobile.storage }} GB<br>
-                Rating: {{ mobile.rating }} ⭐
-                <p><em>Why recommended:</em> {{ mobile.reason }}</p>
-
+            <div class="card">
+                <img src="{{ mobile.image }}" alt="{{ mobile.model }}">
+                <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
+                <p class="price">₹{{ mobile.price }}</p>
+                <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
+                <p>⭐ {{ mobile.rating }}</p>
+                <p class="reason"><em>Why recommended:</em> {{ mobile.reason }}</p>
             </div>
-            <hr>
         {% endfor %}
-    {% else %}
-        <p>No mobiles found matching your criteria.</p>
-    {% endif %}
+    </div>
+{% else %}
+    <p style="text-align:center;">No mobiles found matching your criteria.</p>
+{% endif %}
 
-    <br>
-    <a href="/">⬅ Go Back</a>
+<a href="/" class="back-link">⬅ Go Back</a>
 
 </body>
 </html>
