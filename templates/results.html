@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Recommended Mobiles</title>
 </head>
 <body>
+
     <h2>Recommended Mobiles 📱</h2>
 
     {% if mobiles %}
         {% for mobile in mobiles %}
-            <div>
+            <div style="margin-bottom: 20px;">
                 <strong>{{ mobile.brand }} {{ mobile.model }}</strong><br>
                 Price: ₹{{ mobile.price }}<br>
                 RAM: {{ mobile.ram }} GB<br>
                 Storage: {{ mobile.storage }} GB<br>
-                Rating: {{ mobile.rating }}
+                Rating: {{ mobile.rating }} ⭐
             </div>
             <hr>
         {% endfor %}
@@ -21,6 +23,8 @@
         <p>No mobiles found matching your criteria.</p>
     {% endif %}
 
-    <a href="/">Go Back</a>
+    <br>
+    <a href="/">⬅ Go Back</a>
+
 </body>
 </html>
