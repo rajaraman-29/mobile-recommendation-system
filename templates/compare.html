@@ -1,38 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Mobile Comparison</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2 class="title">Mobile Comparison <span class="vs">VS</span></h2>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
-<div class="compare-wrapper">
-    <table class="compare-table">
-        <tr>
-            <th>Feature</th>
-            {% for m in mobiles %}
-            <th>{{ m.brand }} {{ m.model }}</th>
-            {% endfor %}
-        </tr>
+<div class="page-wrapper">
 
-        <tr><td>Price</td>{% for m in mobiles %}<td>₹{{ m.price }}</td>{% endfor %}</tr>
-        <tr><td>RAM</td>{% for m in mobiles %}<td>{{ m.ram }} GB</td>{% endfor %}</tr>
-        <tr><td>Storage</td>{% for m in mobiles %}<td>{{ m.storage }} GB</td>{% endfor %}</tr>
-        <tr><td>Rating</td>{% for m in mobiles %}<td>⭐ {{ m.rating }}</td>{% endfor %}</tr>
-        <tr><td>Best Price</td>{% for m in mobiles %}<td>{{ m.best_store }} – ₹{{ m.best_price }}</td>{% endfor %}</tr>
-    </table>
+    <h2 class="main-title">Mobile Comparison <span class="vs">VS</span></h2>
+
+    <div class="compare-container">
+
+        <div class="card compare-card">
+            <table class="compare-table">
+
+                <tr>
+                    <th>Feature</th>
+                    {% for m in mobiles %}
+                    <th>{{ m.brand }} {{ m.model }}</th>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td>Price</td>
+                    {% for m in mobiles %}
+                    <td>₹{{ m.price }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td>RAM</td>
+                    {% for m in mobiles %}
+                    <td>{{ m.ram }} GB</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td>Storage</td>
+                    {% for m in mobiles %}
+                    <td>{{ m.storage }} GB</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td>Rating</td>
+                    {% for m in mobiles %}
+                    <td>⭐ {{ m.rating }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td>Best Price</td>
+                    {% for m in mobiles %}
+                    <td class="best">{{ m.best_store }} – ₹{{ m.best_price }}</td>
+                    {% endfor %}
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="card winner-card">
+            <h3>✅ Recommended After Comparison</h3>
+            <h2>{{ recommended.brand }} {{ recommended.model }}</h2>
+            <p>{{ recommended.explanation }}</p>
+        </div>
+
+    </div>
+
+    <a href="javascript:history.back()" class="back-link">⬅ Go Back</a>
+
 </div>
 
-<!-- FINAL RECOMMENDATION -->
-<div class="final-recommendation">
-    ✅ <strong>Recommended after comparison:</strong><br>
-    {{ recommended.brand }} {{ recommended.model }}<br>
-    <small>Higher performance score based on RAM, rating, and price.</small>
-</div>
-
-<a href="/" class="back-link">⬅ Go Back</a>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark"));
+}
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+}
+</script>
 
 </body>
 </html>

@@ -1,69 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Recommended Mobiles</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2 class="title">Recommended Mobiles 📱</h2>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
-{% if mobiles %}
+<h2 class="title results-title">Recommended Mobiles 📱</h2>
+
 <form action="/compare" method="post">
 
-<div class="container">
-{% for mobile in mobiles %}
-<div class="card animate-card">
+<div class="results-container">
 
-    <!-- Compare checkbox -->
-    <div class="compare-box">
-        <input type="checkbox" name="compare" value="{{ mobile.model }}">
-        <label>Compare</label>
+{% for mobile in mobiles %}
+<div class="mobile-card">
+
+    <div class="card-top">
+        <label>
+            <input type="checkbox" name="compare" value="{{ mobile.model }}"> Compare
+        </label>
+
+        {% if loop.index == 1 %}
+            <span class="top-pick">Top Pick ⭐</span>
+        {% endif %}
     </div>
 
-    <!-- Top Pick badge -->
-    {% if loop.index == 1 %}
-        <span class="badge">Top Pick ⭐</span>
-    {% endif %}
-
-    <!-- Mobile image -->
-    <img src="{{ mobile.image }}"
-         alt="{{ mobile.model }}"
+    <img src="{{ mobile.image }}" alt="{{ mobile.model }}"
          onerror="this.src='/static/fallback.png'">
 
-    <!-- Mobile details -->
     <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
 
     <p class="price">₹{{ mobile.price }}</p>
 
-    <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
+    <p class="specs">
+        RAM: {{ mobile.ram }} GB |
+        Storage: {{ mobile.storage }} GB
+    </p>
 
-    <p>⭐ {{ mobile.rating }}</p>
+    <p class="rating">⭐ {{ mobile.rating }}</p>
 
     <p class="best-price">
-        Best price: {{ mobile.best_store }} – ₹{{ mobile.best_price }}
+        Best Price: {{ mobile.best_store }} – ₹{{ mobile.best_price }}
     </p>
 
     <p class="reason">
-        <em>Why recommended:</em> {{ mobile.reason }}
+        <strong>Why recommended:</strong> {{ mobile.reason }}
     </p>
+
+    <div class="buy-links">
+        <a href="{{ mobile.amazon_link }}" target="_blank" class="store-btn amazon">Amazon</a>
+        <a href="{{ mobile.flipkart_link }}" target="_blank" class="store-btn flipkart">Flipkart</a>
+        <a href="{{ mobile.croma_link }}" target="_blank" class="store-btn croma">Croma</a>
+    </div>
 
 </div>
 {% endfor %}
+
 </div>
 
-<div class="sticky-compare">
-    <button type="submit" class="primary-btn small-btn">
-        Compare Selected
-    </button>
+<div class="compare-sticky">
+    <button type="submit" class="compare-btn">Compare Selected</button>
 </div>
 
 </form>
-{% else %}
-<p>No mobiles found for your criteria.</p>
-{% endif %}
 
-<a href="/" class="back-link">⬅ Go Back</a>
+<a href="/" class="back-link">⬅ Back to Home</a>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark"));
+}
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+}
+</script>
 
 </body>
 </html>

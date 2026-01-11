@@ -1,167 +1,203 @@
-/* ---------- GLOBAL ---------- */
+/* ---------- THEME VARIABLES ---------- */
+:root {
+    --bg-main: linear-gradient(135deg, #e0e7ff, #f0f9ff);
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --accent: #2563eb;
+}
+
 body {
+    margin: 0;
     font-family: "Segoe UI", sans-serif;
-    text-align: center;
-    background: linear-gradient(120deg, #f6f9ff, #eef2ff);
+    background: var(--bg-main);
+    color: var(--text-main);
 }
 
-.title {
-    margin-top: 30px;
+body.dark {
+    --bg-main: linear-gradient(135deg, #020617, #020617);
+    --card-bg: #0f172a;
+    --text-main: #e5e7eb;
+    --accent: #3b82f6;
 }
 
-/* ---------- HOME PAGE ---------- */
-.home-bg {
+/* ---------- DARK MODE BUTTON ---------- */
+.dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    color: var(--accent);
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* ---------- LAYOUT ---------- */
+.page-wrapper {
     min-height: 100vh;
+    text-align: center;
+    padding-top: 50px;
 }
 
-.home-form {
-    width: 380px;
-    margin: 40px auto;
+/* ---------- TITLES ---------- */
+.main-title, .title {
+    color: var(--accent);
+}
+
+.subtitle {
+    margin-bottom: 30px;
+}
+
+/* ---------- CARDS ---------- */
+.card, .mobile-card, .winner-card, .home-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ---------- HOME ---------- */
+.home-card {
+    width: 360px;
+    margin: auto;
     padding: 25px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .form-group {
+    margin-bottom: 18px;
     text-align: left;
-    margin-bottom: 15px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c7d2fe;
 }
 
 /* ---------- BUTTON ---------- */
 .primary-btn {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(90deg, #4f46e5, #6366f1);
-    color: white;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
     border: none;
-    border-radius: 25px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
-.primary-btn:hover {
-    transform: scale(1.05);
-}
-
-/* ---------- CARDS ---------- */
-.container {
+/* ---------- RESULTS ---------- */
+.results-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 22px;
+    padding: 20px 20px 100px;
 }
 
-.card {
-    width: 260px;
-    margin: 15px;
-    padding: 15px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+.mobile-card {
+    width: 270px;
+    padding: 16px;
+    transition: transform 0.3s ease;
 }
 
-.animate-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.mobile-card:hover {
+    transform: translateY(-10px);
 }
 
-.animate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.2);
-}
-
-.card img {
+.mobile-card img {
     width: 100%;
-    height: 260px;
+    height: 240px;
     object-fit: contain;
-    background: #f9f9f9;
 }
 
-/* ---------- TAGS ---------- */
-.badge {
-    display: inline-block;
-    background: linear-gradient(90deg, gold, orange);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-weight: bold;
+.top-pick {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 12px;
 }
 
-.compare-box {
-    text-align: left;
-    font-size: 14px;
-}
-
-.price {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.best-price {
-    color: #0a8f08;
-    font-weight: bold;
-}
-
-/* ---------- LINKS ---------- */
-.back-link {
-    display: block;
-    margin: 30px 0;
-}
-/* ---------- COMPARISON PAGE ---------- */
-.compare-wrapper {
+.buy-links {
     display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.store-btn {
+    flex: 1;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.amazon { background: #ff9900; }
+.flipkart { background: #2874f0; }
+.croma { background: #ee0000; }
+
+/* ---------- COMPARE ---------- */
+.compare-container {
+    display: flex;
+    gap: 30px;
     justify-content: center;
-    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.compare-card {
+    width: 600px;
 }
 
 .compare-table {
+    width: 100%;
     border-collapse: collapse;
-    width: 70%;
-    background: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.compare-table th,
-.compare-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
+.compare-table td, .compare-table th {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.compare-table th {
-    background: #eef2ff;
+.best {
+    color: #22c55e;
     font-weight: bold;
 }
 
-.vs {
-    background: orange;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-/* ---------- FINAL RECOMMENDATION ---------- */
-.final-recommendation {
-    margin: 40px auto;
+.winner-card {
+    width: 300px;
     padding: 20px;
-    width: 60%;
-    background: linear-gradient(90deg, #dcfce7, #bbf7d0);
-    border-radius: 12px;
-    font-size: 18px;
-    animation: fadeIn 1s ease-in;
 }
 
-/* ---------- STICKY COMPARE BUTTON ---------- */
-.sticky-compare {
-    position: sticky;
+/* ---------- STICKY COMPARE ---------- */
+.compare-sticky {
+    position: fixed;
     bottom: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
 }
 
-.small-btn {
-    width: auto;
-    padding: 10px 20px;
-    font-size: 14px;
+.compare-btn {
+    padding: 12px 26px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
 }
 
+.back-link {
+    display: block;
+    margin: 30px 0;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.vs {
+    color: #ef4444;
+}

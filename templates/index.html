@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mobile Recommendation</title>
+    <meta charset="UTF-8">
+    <title>Smart Mobile Recommendation System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="home-bg">
+<body>
 
-<h2 class="title">Mobile Recommendation System 📱</h2>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
-<!-- Home input form -->
-<form action="/recommend" method="post" class="home-form">
+<div class="page-wrapper">
 
-    <div class="form-group">
-        <label>Budget (₹)</label>
-        <input type="number" name="budget" required>
+    <h1 class="main-title">Smart Mobile Recommendation System 📱</h1>
+    <p class="subtitle">Find the best smartphone based on your needs</p>
+
+    <div class="card home-card">
+
+        <form action="/recommend" method="post">
+
+            <div class="form-group">
+                <label>💰 Budget (₹)</label>
+                <input type="number" name="budget" placeholder="Eg: 20000" required>
+            </div>
+
+            <div class="form-group">
+                <label>⚡ Minimum RAM (GB)</label>
+                <input type="number" name="ram" placeholder="Eg: 8" required>
+            </div>
+
+            <div class="form-group">
+                <label>🎯 Usage Type</label>
+                <select name="usage">
+                    <option value="student">Student</option>
+                    <option value="office">Office</option>
+                    <option value="gaming">Gaming</option>
+                </select>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Get Recommendations 🚀
+            </button>
+
+        </form>
+
     </div>
 
-    <div class="form-group">
-        <label>Minimum RAM (GB)</label>
-        <input type="number" name="ram" required>
-    </div>
+</div>
 
-    <div class="form-group">
-        <label>Usage</label>
-        <select name="usage">
-            <option value="student">Student</option>
-            <option value="gaming">Gaming</option>
-            <option value="office">Office</option>
-        </select>
-    </div>
-
-    <!-- Animated button -->
-    <button type="submit" class="primary-btn">
-        Get Recommendations
-    </button>
-</form>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark"));
+}
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+}
+</script>
 
 </body>
 </html>
