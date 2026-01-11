@@ -1,18 +1,18 @@
-brand,model,price,ram,storage,usage,rating,image
-Samsung,Galaxy A14,13999,4,64,student,4.1,https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a14-5g-1.jpg
-Redmi,Note 12,15999,6,128,student,4.2,https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-12-1.jpg
-Realme,Narzo 60,17999,8,128,student,4.3,https://fdn2.gsmarena.com/vv/pics/realme/realme-narzo-60-1.jpg
-Motorola,G34,18999,8,128,student,4.2,https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g34-5g-1.jpg
-Infinix,Zero 5G,19999,8,128,student,4.1,https://fdn2.gsmarena.com/vv/pics/infinix/infinix-zero-5g-2023-1.jpg
+brand,model,price,ram,storage,usage,rating,image,amazon_price,flipkart_price,croma_price
+Samsung,Galaxy A14,13999,4,64,student,4.1,https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a14-5g-1.jpg,13999,13499,14299
+Redmi,Note 12,15999,6,128,student,4.2,https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-12-1.jpg,15999,15499,16299
+Realme,Narzo 60,17999,8,128,student,4.3,https://fdn2.gsmarena.com/vv/pics/realme/realme-narzo-60-1.jpg,17999,16999,18299
+Motorola,G34,18999,8,128,student,4.2,https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g34-5g-1.jpg,18999,18499,19299
+Infinix,Zero 5G,19999,8,128,student,4.1,https://fdn2.gsmarena.com/vv/pics/infinix/infinix-zero-5g-2023-1.jpg,19999,18999,20499
 
-iQOO,Z6,24999,8,128,gaming,4.4,https://fdn2.gsmarena.com/vv/pics/iqoo/iqoo-z6-1.jpg
-Poco,X5 Pro,23999,8,256,gaming,4.3,https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-poco-x5-pro-1.jpg
-Realme,GT Neo 3,28999,12,256,gaming,4.5,https://fdn2.gsmarena.com/vv/pics/realme/realme-gt-neo3-1.jpg
-Asus,ROG Phone 6,49999,12,256,gaming,4.6,https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-6-1.jpg
-Samsung,Galaxy S21 FE,39999,8,256,gaming,4.6,https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-fe-5g-1.jpg
+iQOO,Z6,24999,8,128,gaming,4.4,https://fdn2.gsmarena.com/vv/pics/iqoo/iqoo-z6-1.jpg,24999,23999,25499
+Poco,X5 Pro,23999,8,256,gaming,4.3,https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-poco-x5-pro-1.jpg,23999,22999,24499
+Realme,GT Neo 3,28999,12,256,gaming,4.5,https://fdn2.gsmarena.com/vv/pics/realme/realme-gt-neo3-1.jpg,28999,27999,29499
+Asus,ROG Phone 6,49999,12,256,gaming,4.6,https://fdn2.gsmarena.com/vv/pics/asus/asus-rog-phone-6-1.jpg,49999,48999,50499
+Samsung,Galaxy S21 FE,39999,8,256,gaming,4.6,https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-fe-5g-1.jpg,39999,38999,40999
 
-OnePlus,Nord CE 3,26999,8,128,office,4.5,https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-ce-3-lite-1.jpg
-Samsung,Galaxy S23,74999,8,256,office,4.7,https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-1.jpg
-Apple,iPhone 13,59999,4,128,office,4.7,https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg
-Apple,iPhone 14,69999,6,128,office,4.8,https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-1.jpg
-Google,Pixel 7,59999,8,128,office,4.6,https://fdn2.gsmarena.com/vv/pics/google/google-pixel-7-1.jpg
+OnePlus,Nord CE 3,26999,8,128,office,4.5,https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-ce-3-lite-1.jpg,26999,25999,27499
+Samsung,Galaxy S23,74999,8,256,office,4.7,https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s23-1.jpg,74999,73999,75999
+Apple,iPhone 13,59999,4,128,office,4.7,https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg,59999,58999,60999
+Apple,iPhone 14,69999,6,128,office,4.8,https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-1.jpg,69999,68999,70999
+Google,Pixel 7,59999,8,128,office,4.6,https://fdn2.gsmarena.com/vv/pics/google/google-pixel-7-1.jpg,59999,57999,61499

@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Recommended Mobiles</title>
-
-    <!-- Link CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,33 +10,39 @@
 <h2>Recommended Mobiles 📱</h2>
 
 {% if mobiles %}
-    <div class="container">
-        {% for mobile in mobiles %}
-            <div class="card">
+<div class="container">
+    {% for mobile in mobiles %}
+    <div class="card">
 
-                {% if loop.index == 1 %}
-                    <span class="badge">Top Pick ⭐</span>
-                {% endif %}
+        {% if loop.index == 1 %}
+            <span class="badge">Top Pick ⭐</span>
+        {% endif %}
 
-                <img src="{{ mobile.image }}" alt="{{ mobile.model }}">
+        <img src="{{ mobile.image }}"
+             alt="{{ mobile.model }}"
+             onerror="this.src='/static/fallback.png'">
 
-                <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
+        <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
 
-                <p class="price">₹{{ mobile.price }}</p>
+        <p class="price">&#8377;{{ mobile.price }}</p>
 
-                <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
+        <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
 
-                <p>⭐ {{ mobile.rating }}</p>
+        <p>⭐ {{ mobile.rating }}</p>
 
-                <p class="reason">
-                    <em>Why recommended:</em> {{ mobile.reason }}
-                </p>
+        <p style="color: green; font-weight: bold;">
+            Best price: {{ mobile.best_store }} – &#8377;{{ mobile.best_price }}
+        </p>
 
-            </div>
-        {% endfor %}
+        <p class="reason">
+            <em>Why recommended:</em> {{ mobile.reason }}
+        </p>
+
     </div>
+    {% endfor %}
+</div>
 {% else %}
-    <p style="text-align:center;">No mobiles found matching your criteria.</p>
+<p>No mobiles found matching your criteria.</p>
 {% endif %}
 
 <a href="/" class="back-link">⬅ Go Back</a>

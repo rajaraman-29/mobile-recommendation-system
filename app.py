@@ -8,16 +8,15 @@ app = Flask(__name__)
 # Load dataset
 data = pd.read_csv("data/data.csv")
 
-# Encode categorical column: usage
+# Encode usage
 usage_encoder = LabelEncoder()
 data["usage_encoded"] = usage_encoder.fit_transform(data["usage"])
 
-# Select features for ML
-feature_columns = ["price", "ram", "storage", "rating", "usage_encoded"]
+# Features for similarity
+feature_cols = ["price", "ram", "storage", "rating", "usage_encoded"]
 
-# Scale numeric features to same range
 scaler = MinMaxScaler()
-scaled_features = scaler.fit_transform(data[feature_columns])
+scaled_features = scaler.fit_transform(data[feature_cols])
 
 @app.route("/")
 def home():
@@ -25,15 +24,12 @@ def home():
 
 @app.route("/recommend", methods=["POST"])
 def recommend():
-    # 1️⃣ Get user input
-    budget = int(request.form.get("budget", 0))
-    ram = int(request.form.get("ram", 0))
-    usage = request.form.get("usage", "student")
+    budget = int(request.form.get("budget"))
+    ram = int(request.form.get("ram"))
+    usage = request.form.get("usage")
 
-    # 2️⃣ Encode usage
     usage_encoded = usage_encoder.transform([usage])[0]
 
-    # 3️⃣ Create user preference vector
     user_vector = [[
         budget,
         ram,
@@ -42,53 +38,39 @@ def recommend():
         usage_encoded
     ]]
 
-    # 4️⃣ Scale user vector
     user_vector_scaled = scaler.transform(user_vector)
 
-    # 5️⃣ Compute cosine similarity
     similarity_scores = cosine_similarity(
         user_vector_scaled,
         scaled_features
     )[0]
 
-    # 6️⃣ Add similarity score to dataframe
     data["similarity"] = similarity_scores
 
-    # 7️⃣ Filter by basic constraints
-    filtered_data = data[
+    filtered = data[
         (data["price"] <= budget) &
         (data["ram"] >= ram)
-    ]
+    ].sort_values(by="similarity", ascending=False)
 
-    # 8️⃣ Sort by similarity (best first)
-    filtered_data = filtered_data.sort_values(
-        by="similarity",
-        ascending=False
-    )
+    mobiles = filtered.head(5).to_dict(orient="records")
 
-    # 9️⃣ Take top 5 recommendations
-    top_mobiles = filtered_data.head(5)
-
-    mobiles = top_mobiles.to_dict(orient="records")
-
-    # Add explanation for each recommendation
+    # Add best price + reason
     for mobile in mobiles:
-        reasons = []
+        store_prices = {
+            "Amazon": mobile["amazon_price"],
+            "Flipkart": mobile["flipkart_price"],
+            "Croma": mobile["croma_price"]
+        }
 
-        if mobile["price"] <= budget:
-            reasons.append("fits within your budget")
+        best_store = min(store_prices, key=store_prices.get)
+        best_price = store_prices[best_store]
 
-        if mobile["ram"] >= ram:
-            reasons.append(f"meets your RAM requirement ({mobile['ram']} GB)")
-
-        if mobile["usage"] == usage:
-            reasons.append("suitable for your usage")
-
-        if mobile["rating"] >= 4.5:
-            reasons.append("high user rating")
-
-        mobile["reason"] = ", ".join(reasons)
-
+        mobile["best_store"] = best_store
+        mobile["best_price"] = best_price
+        mobile["reason"] = (
+            f"Within your budget, has {mobile['ram']}GB RAM "
+            f"and suitable for {usage} usage."
+        )
 
     return render_template("results.html", mobiles=mobiles)
 
