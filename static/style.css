@@ -1,79 +1,167 @@
+/* ---------- GLOBAL ---------- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 20px;
-}
-
-h2 {
+    font-family: "Segoe UI", sans-serif;
     text-align: center;
-    margin-bottom: 30px;
+    background: linear-gradient(120deg, #f6f9ff, #eef2ff);
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.title {
+    margin-top: 30px;
 }
 
-/* Card styling */
-.card {
+/* ---------- HOME PAGE ---------- */
+.home-bg {
+    min-height: 100vh;
+}
+
+.home-form {
+    width: 380px;
+    margin: 40px auto;
+    padding: 25px;
     background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* ---------- BUTTON ---------- */
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- CARDS ---------- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 260px;
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.animate-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.2);
 }
 
 .card img {
     width: 100%;
-    height: 220px;
+    height: 260px;
     object-fit: contain;
-    margin-bottom: 10px;
+    background: #f9f9f9;
 }
 
-.card h3 {
-    margin: 5px 0;
-}
-
-/* Price highlight */
-.price {
-    color: #2c7be5;
+/* ---------- TAGS ---------- */
+.badge {
+    display: inline-block;
+    background: linear-gradient(90deg, gold, orange);
+    padding: 5px 12px;
+    border-radius: 20px;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
-/* Explanation text */
-.reason {
-    font-size: 0.9em;
-    color: #555;
+.compare-box {
+    text-align: left;
+    font-size: 14px;
 }
 
-/* Back link */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.best-price {
+    color: #0a8f08;
+    font-weight: bold;
+}
+
+/* ---------- LINKS ---------- */
 .back-link {
     display: block;
-    text-align: center;
+    margin: 30px 0;
+}
+/* ---------- COMPARISON PAGE ---------- */
+.compare-wrapper {
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
-    text-decoration: none;
-    color: #2c7be5;
+}
+
+.compare-table {
+    border-collapse: collapse;
+    width: 70%;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.compare-table th {
+    background: #eef2ff;
     font-weight: bold;
 }
 
-/* Top Pick badge */
-.badge {
-    position: absolute;
-    background-color: #ff9800;
+.vs {
+    background: orange;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8em;
-    font-weight: bold;
-    top: 10px;
-    right: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
 }
+
+/* ---------- FINAL RECOMMENDATION ---------- */
+.final-recommendation {
+    margin: 40px auto;
+    padding: 20px;
+    width: 60%;
+    background: linear-gradient(90deg, #dcfce7, #bbf7d0);
+    border-radius: 12px;
+    font-size: 18px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* ---------- STICKY COMPARE BUTTON ---------- */
+.sticky-compare {
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.small-btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+

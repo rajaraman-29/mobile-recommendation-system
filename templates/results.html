@@ -1,48 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Recommended Mobiles</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2>Recommended Mobiles 📱</h2>
+<h2 class="title">Recommended Mobiles 📱</h2>
 
 {% if mobiles %}
+<form action="/compare" method="post">
+
 <div class="container">
-    {% for mobile in mobiles %}
-    <div class="card">
+{% for mobile in mobiles %}
+<div class="card animate-card">
 
-        {% if loop.index == 1 %}
-            <span class="badge">Top Pick ⭐</span>
-        {% endif %}
-
-        <img src="{{ mobile.image }}"
-             alt="{{ mobile.model }}"
-             onerror="this.src='/static/fallback.png'">
-
-        <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
-
-        <p class="price">&#8377;{{ mobile.price }}</p>
-
-        <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
-
-        <p>⭐ {{ mobile.rating }}</p>
-
-        <p style="color: green; font-weight: bold;">
-            Best price: {{ mobile.best_store }} – &#8377;{{ mobile.best_price }}
-        </p>
-
-        <p class="reason">
-            <em>Why recommended:</em> {{ mobile.reason }}
-        </p>
-
+    <!-- Compare checkbox -->
+    <div class="compare-box">
+        <input type="checkbox" name="compare" value="{{ mobile.model }}">
+        <label>Compare</label>
     </div>
-    {% endfor %}
+
+    <!-- Top Pick badge -->
+    {% if loop.index == 1 %}
+        <span class="badge">Top Pick ⭐</span>
+    {% endif %}
+
+    <!-- Mobile image -->
+    <img src="{{ mobile.image }}"
+         alt="{{ mobile.model }}"
+         onerror="this.src='/static/fallback.png'">
+
+    <!-- Mobile details -->
+    <h3>{{ mobile.brand }} {{ mobile.model }}</h3>
+
+    <p class="price">₹{{ mobile.price }}</p>
+
+    <p>RAM: {{ mobile.ram }} GB | Storage: {{ mobile.storage }} GB</p>
+
+    <p>⭐ {{ mobile.rating }}</p>
+
+    <p class="best-price">
+        Best price: {{ mobile.best_store }} – ₹{{ mobile.best_price }}
+    </p>
+
+    <p class="reason">
+        <em>Why recommended:</em> {{ mobile.reason }}
+    </p>
+
 </div>
+{% endfor %}
+</div>
+
+<div class="sticky-compare">
+    <button type="submit" class="primary-btn small-btn">
+        Compare Selected
+    </button>
+</div>
+
+</form>
 {% else %}
-<p>No mobiles found matching your criteria.</p>
+<p>No mobiles found for your criteria.</p>
 {% endif %}
 
 <a href="/" class="back-link">⬅ Go Back</a>

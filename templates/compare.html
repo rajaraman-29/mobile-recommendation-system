@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2 class="title">Mobile Comparison <span class="vs">VS</span></h2>
+
+<div class="compare-wrapper">
+    <table class="compare-table">
+        <tr>
+            <th>Feature</th>
+            {% for m in mobiles %}
+            <th>{{ m.brand }} {{ m.model }}</th>
+            {% endfor %}
+        </tr>
+
+        <tr><td>Price</td>{% for m in mobiles %}<td>₹{{ m.price }}</td>{% endfor %}</tr>
+        <tr><td>RAM</td>{% for m in mobiles %}<td>{{ m.ram }} GB</td>{% endfor %}</tr>
+        <tr><td>Storage</td>{% for m in mobiles %}<td>{{ m.storage }} GB</td>{% endfor %}</tr>
+        <tr><td>Rating</td>{% for m in mobiles %}<td>⭐ {{ m.rating }}</td>{% endfor %}</tr>
+        <tr><td>Best Price</td>{% for m in mobiles %}<td>{{ m.best_store }} – ₹{{ m.best_price }}</td>{% endfor %}</tr>
+    </table>
+</div>
+
+<!-- FINAL RECOMMENDATION -->
+<div class="final-recommendation">
+    ✅ <strong>Recommended after comparison:</strong><br>
+    {{ recommended.brand }} {{ recommended.model }}<br>
+    <small>Higher performance score based on RAM, rating, and price.</small>
+</div>
+
+<a href="/" class="back-link">⬅ Go Back</a>
+
+</body>
+</html>
