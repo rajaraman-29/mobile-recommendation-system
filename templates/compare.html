@@ -21,7 +21,7 @@
                 <tr>
                     <th>Feature</th>
                     {% for m in mobiles %}
-                    <th>{{ m.brand }} {{ m.model }}</th>
+                    <th>{{ m.model }}</th>
                     {% endfor %}
                 </tr>
 
@@ -65,7 +65,7 @@
 
         <div class="card winner-card">
             <h3>✅ Recommended After Comparison</h3>
-            <h2>{{ recommended.brand }} {{ recommended.model }}</h2>
+            <h2>{{ recommended.model }}</h2>
             <p>{{ recommended.explanation }}</p>
         </div>
 

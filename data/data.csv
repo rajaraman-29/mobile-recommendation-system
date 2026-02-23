@@ -1,44 +1,42 @@
 brand,model,price,ram,storage,rating,usage,amazon_price,flipkart_price,croma_price,amazon_link,flipkart_link,croma_link,image
-Apple,iPhone 15,79900,6,128,4.6,office,78900,79499,79900,https://amazon.in/iphone15,https://flipkart.com/iphone15,https://croma.com/iphone15,https://via.placeholder.com/250
-Apple,iPhone 15 Plus,89900,6,128,4.6,office,88900,89500,89900,https://amazon.in/iphone15plus,https://flipkart.com/iphone15plus,https://croma.com/iphone15plus,https://via.placeholder.com/250
-Apple,iPhone 14,69900,6,128,4.5,office,68900,69500,69900,https://amazon.in/iphone14,https://flipkart.com/iphone14,https://croma.com/iphone14,https://via.placeholder.com/250
-Apple,iPhone 13,59900,4,128,4.5,student,58900,59500,59900,https://amazon.in/iphone13,https://flipkart.com/iphone13,https://croma.com/iphone13,https://via.placeholder.com/250
-Samsung,Galaxy S23,74999,8,256,4.5,gaming,73999,74500,74999,https://amazon.in/s23,https://flipkart.com/s23,https://croma.com/s23,https://via.placeholder.com/250
-Samsung,Galaxy S23 FE,59999,8,128,4.4,gaming,58999,59499,59999,https://amazon.in/s23fe,https://flipkart.com/s23fe,https://croma.com/s23fe,https://via.placeholder.com/250
-Samsung,Galaxy A54,38999,8,128,4.3,student,37999,38499,38999,https://amazon.in/a54,https://flipkart.com/a54,https://croma.com/a54,https://via.placeholder.com/250
-Samsung,Galaxy M34,18999,6,128,4.2,student,17999,18499,18999,https://amazon.in/m34,https://flipkart.com/m34,https://croma.com/m34,https://via.placeholder.com/250
-Samsung,Galaxy F54,27999,8,256,4.3,office,26999,27499,27999,https://amazon.in/f54,https://flipkart.com/f54,https://croma.com/f54,https://via.placeholder.com/250
-OnePlus,OnePlus 12,64999,12,256,4.6,gaming,63999,64499,64999,https://amazon.in/op12,https://flipkart.com/op12,https://croma.com/op12,https://via.placeholder.com/250
-OnePlus,OnePlus 11R,39999,8,128,4.4,gaming,38999,39499,39999,https://amazon.in/op11r,https://flipkart.com/op11r,https://croma.com/op11r,https://via.placeholder.com/250
-OnePlus,Nord CE 3,26999,8,128,4.2,student,25999,26499,26999,https://amazon.in/nordce3,https://flipkart.com/nordce3,https://croma.com/nordce3,https://via.placeholder.com/250
-OnePlus,Nord CE 3 Lite,19999,8,128,4.2,student,18999,19499,19999,https://amazon.in/nordlite,https://flipkart.com/nordlite,https://croma.com/nordlite,https://via.placeholder.com/250
-Xiaomi,Redmi Note 13 Pro,25999,8,256,4.3,gaming,24999,25499,25999,https://amazon.in/rn13pro,https://flipkart.com/rn13pro,https://croma.com/rn13pro,https://via.placeholder.com/250
-Xiaomi,Redmi Note 12,16999,6,128,4.1,student,15999,16499,16999,https://amazon.in/rn12,https://flipkart.com/rn12,https://croma.com/rn12,https://via.placeholder.com/250
-Xiaomi,Redmi 12 5G,12999,6,128,4.1,student,11999,12499,12999,https://amazon.in/redmi12,https://flipkart.com/redmi12,https://croma.com/redmi12,https://via.placeholder.com/250
-Realme,Realme GT 6,35999,12,256,4.4,gaming,34999,35499,35999,https://amazon.in/gt6,https://flipkart.com/gt6,https://croma.com/gt6,https://via.placeholder.com/250
-Realme,Realme Narzo 60,17999,8,128,4.2,student,16999,17499,17999,https://amazon.in/narzo60,https://flipkart.com/narzo60,https://croma.com/narzo60,https://via.placeholder.com/250
-Realme,Realme 11 Pro,23999,8,256,4.3,office,22999,23499,23999,https://amazon.in/r11pro,https://flipkart.com/r11pro,https://croma.com/r11pro,https://via.placeholder.com/250
-Vivo,Vivo V29,32999,8,256,4.3,office,31999,32499,32999,https://amazon.in/v29,https://flipkart.com/v29,https://croma.com/v29,https://via.placeholder.com/250
-Vivo,Vivo T2 5G,18999,8,128,4.1,student,17999,18499,18999,https://amazon.in/vt2,https://flipkart.com/vt2,https://croma.com/vt2,https://via.placeholder.com/250
-Vivo,Vivo X100,63999,12,256,4.6,gaming,62999,63499,63999,https://amazon.in/x100,https://flipkart.com/x100,https://croma.com/x100,https://via.placeholder.com/250
-Motorola,Edge 40,29999,8,256,4.4,office,28999,29499,29999,https://amazon.in/edge40,https://flipkart.com/edge40,https://croma.com/edge40,https://via.placeholder.com/250
-Motorola,Moto G84,19999,8,128,4.2,student,18999,19499,19999,https://amazon.in/g84,https://flipkart.com/g84,https://croma.com/g84,https://via.placeholder.com/250
-Motorola,Moto G54,15999,6,128,4.1,student,14999,15499,15999,https://amazon.in/g54,https://flipkart.com/g54,https://croma.com/g54,https://via.placeholder.com/250
-iQOO,iQOO Neo 9 Pro,37999,12,256,4.5,gaming,36999,37499,37999,https://amazon.in/neo9,https://flipkart.com/neo9,https://croma.com/neo9,https://via.placeholder.com/250
-iQOO,iQOO Z7 Pro,23999,8,128,4.3,student,22999,23499,23999,https://amazon.in/z7pro,https://flipkart.com/z7pro,https://croma.com/z7pro,https://via.placeholder.com/250
-Nothing,Nothing Phone 2,44999,12,256,4.4,gaming,43999,44499,44999,https://amazon.in/nphone2,https://flipkart.com/nphone2,https://croma.com/nphone2,https://via.placeholder.com/250
-Nothing,Nothing Phone 2a,25999,8,128,4.3,office,24999,25499,25999,https://amazon.in/nphone2a,https://flipkart.com/nphone2a,https://croma.com/nphone2a,https://via.placeholder.com/250
-Oppo,Oppo Reno 11,28999,8,256,4.3,office,27999,28499,28999,https://amazon.in/reno11,https://flipkart.com/reno11,https://croma.com/reno11,https://via.placeholder.com/250
-Oppo,Oppo F23 5G,21999,8,256,4.2,student,20999,21499,21999,https://amazon.in/f23,https://flipkart.com/f23,https://croma.com/f23,https://via.placeholder.com/250
-Google,Pixel 8,75999,8,128,4.6,office,74999,75499,75999,https://amazon.in/pixel8,https://flipkart.com/pixel8,https://croma.com/pixel8,https://via.placeholder.com/250
-Google,Pixel 7a,43999,8,128,4.4,office,42999,43499,43999,https://amazon.in/pixel7a,https://flipkart.com/pixel7a,https://croma.com/pixel7a,https://via.placeholder.com/250
-Poco,Poco X6 Pro,26999,8,256,4.3,gaming,25999,26499,26999,https://amazon.in/x6pro,https://flipkart.com/x6pro,https://croma.com/x6pro,https://via.placeholder.com/250
-Poco,Poco M6 Pro,14999,6,128,4.1,student,13999,14499,14999,https://amazon.in/m6pro,https://flipkart.com/m6pro,https://croma.com/m6pro,https://via.placeholder.com/250
-Asus,ROG Phone 7,74999,16,512,4.7,gaming,73999,74499,74999,https://amazon.in/rog7,https://flipkart.com/rog7,https://croma.com/rog7,https://via.placeholder.com/250
-Asus,Zenfone 10,59999,8,256,4.5,office,58999,59499,59999,https://amazon.in/zen10,https://flipkart.com/zen10,https://croma.com/zen10,https://via.placeholder.com/250
-Lava,Lava Agni 2,24999,8,256,4.2,student,23999,24499,24999,https://amazon.in/agni2,https://flipkart.com/agni2,https://croma.com/agni2,https://via.placeholder.com/250
-Honor,Honor 90,27999,8,256,4.3,office,26999,27499,27999,https://amazon.in/honor90,https://flipkart.com/honor90,https://croma.com/honor90,https://via.placeholder.com/250
-Infinix,Zero 30 5G,22999,8,256,4.2,student,21999,22499,22999,https://amazon.in/zero30,https://flipkart.com/zero30,https://croma.com/zero30,https://via.placeholder.com/250
-Tecno,Camon 20 Pro,19999,8,128,4.1,student,18999,19499,19999,https://amazon.in/camon20,https://flipkart.com/camon20,https://croma.com/camon20,https://via.placeholder.com/250
-Sony,Xperia 5 V,84999,8,256,4.5,office,83999,84499,84999,https://amazon.in/xperia5v,https://flipkart.com/xperia5v,https://croma.com/xperia5v,https://via.placeholder.com/250
-Nokia,Nokia G42 5G,16999,6,128,4.0,student,15999,16499,16999,https://amazon.in/g42,https://flipkart.com/g42,https://croma.com/g42,https://via.placeholder.com/250
+Apple,iPhone 15,79900,6,128,4.6,office,78900,79499,79900,https://amazon.in/iphone15,https://flipkart.com/iphone15,https://croma.com/iphone15,https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg
+Apple,iPhone 14,69900,6,128,4.5,office,68900,69500,69900,https://amazon.in/iphone14,https://flipkart.com/iphone14,https://croma.com/iphone14,https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg
+Apple,iPhone 13,59900,4,128,4.5,student,58900,59500,59900,https://amazon.in/iphone13,https://flipkart.com/iphone13,https://croma.com/iphone13,https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg
+Samsung,Galaxy S23,74999,8,256,4.5,gaming,73999,74500,74999,https://amazon.in/s23,https://flipkart.com/s23,https://croma.com/s23,https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23.jpg
+Samsung,Galaxy S23 FE,59999,8,128,4.4,gaming,58999,59499,59999,https://amazon.in/s23fe,https://flipkart.com/s23fe,https://croma.com/s23fe,https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-fe.jpg
+Samsung,Galaxy A54,38999,8,128,4.3,student,37999,38499,38999,https://amazon.in/a54,https://flipkart.com/a54,https://croma.com/a54,https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54-5g.jpg
+Samsung,Galaxy M34,18999,6,128,4.2,student,17999,18499,18999,https://amazon.in/m34,https://flipkart.com/m34,https://croma.com/m34,https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m34-5g.jpg
+Samsung,Galaxy F54,27999,8,256,4.3,office,26999,27499,27999,https://amazon.in/f54,https://flipkart.com/f54,https://croma.com/f54,https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-f54.jpg
+OnePlus,OnePlus 12,64999,16,256,4.6,gaming,63999,64499,64999,https://amazon.in/op12,https://flipkart.com/op12,https://croma.com/op12,https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg
+OnePlus,OnePlus 11R,39999,8,128,4.4,gaming,38999,39499,39999,https://amazon.in/op11r,https://flipkart.com/op11r,https://croma.com/op11r,https://fdn2.gsmarena.com/vv/bigpic/oneplus-11r.jpg
+OnePlus,Nord CE 3,26999,8,128,4.2,student,25999,26499,26999,https://amazon.in/nordce3,https://flipkart.com/nordce3,https://croma.com/nordce3,https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce3.jpg
+OnePlus,Nord CE 3 Lite,19999,8,128,4.2,student,18999,19499,19999,https://amazon.in/nordlite,https://flipkart.com/nordlite,https://croma.com/nordlite,https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce3-lite.jpg
+Xiaomi,Redmi Note 13 Pro,25999,8,256,4.3,gaming,24999,25499,25999,https://amazon.in/rn13pro,https://flipkart.com/rn13pro,https://croma.com/rn13pro,https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro.jpg
+Xiaomi,Redmi Note 12,16999,6,128,4.1,student,15999,16499,16999,https://amazon.in/rn12,https://flipkart.com/rn12,https://croma.com/rn12,https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-12.jpg
+Realme,Realme GT 6,35999,12,256,4.4,gaming,34999,35499,35999,https://amazon.in/gt6,https://flipkart.com/gt6,https://croma.com/gt6,https://fdn2.gsmarena.com/vv/bigpic/realme-gt6.jpg
+Realme,Realme 11 Pro,23999,8,256,4.3,office,22999,23499,23999,https://amazon.in/r11pro,https://flipkart.com/r11pro,https://croma.com/r11pro,https://fdn2.gsmarena.com/vv/bigpic/realme-11-pro.jpg
+Realme,Realme Narzo 60,17999,8,128,4.2,student,16999,17499,17999,https://amazon.in/narzo60,https://flipkart.com/narzo60,https://croma.com/narzo60,https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-60.jpg
+iQOO,iQOO Neo 9 Pro,37999,12,256,4.5,gaming,36999,37499,37999,https://amazon.in/neo9,https://flipkart.com/neo9,https://croma.com/neo9,https://fdn2.gsmarena.com/vv/bigpic/vivo-iqoo-neo9-pro.jpg
+iQOO,iQOO Z7 Pro,23999,8,128,4.3,student,22999,23499,23999,https://amazon.in/z7pro,https://flipkart.com/z7pro,https://croma.com/z7pro,https://fdn2.gsmarena.com/vv/bigpic/vivo-iqoo-z7-pro.jpg
+Nothing,Nothing Phone 2,44999,12,256,4.4,gaming,43999,44499,44999,https://amazon.in/nphone2,https://flipkart.com/nphone2,https://croma.com/nphone2,https://fdn2.gsmarena.com/vv/bigpic/nothing-phone-2.jpg
+Nothing,Nothing Phone 2a,25999,8,128,4.3,office,24999,25499,25999,https://amazon.in/nphone2a,https://flipkart.com/nphone2a,https://croma.com/nphone2a,https://fdn2.gsmarena.com/vv/bigpic/nothing-phone-2a.jpg
+Google,Pixel 8,75999,8,128,4.6,office,74999,75499,75999,https://amazon.in/pixel8,https://flipkart.com/pixel8,https://croma.com/pixel8,https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8.jpg
+Google,Pixel 7a,43999,8,128,4.4,office,42999,43499,43999,https://amazon.in/pixel7a,https://flipkart.com/pixel7a,https://croma.com/pixel7a,https://fdn2.gsmarena.com/vv/bigpic/google-pixel-7a.jpg
+Motorola,Edge 40,29999,8,256,4.4,office,28999,29499,29999,https://amazon.in/edge40,https://flipkart.com/edge40,https://croma.com/edge40,https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-40.jpg
+Motorola,Moto G84,19999,8,128,4.2,student,18999,19499,19999,https://amazon.in/g84,https://flipkart.com/g84,https://croma.com/g84,https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-g84.jpg
+Motorola,Moto G54,15999,6,128,4.1,student,14999,15499,15999,https://amazon.in/g54,https://flipkart.com/g54,https://croma.com/g54,https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-g54.jpg
+Asus,ROG Phone 7,69999,16,512,4.7,gaming,68999,69499,69999,https://amazon.in/rog7,https://flipkart.com/rog7,https://croma.com/rog7,https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-7.jpg
+Asus,Zenfone 10,59999,8,256,4.5,office,58999,59499,59999,https://amazon.in/zen10,https://flipkart.com/zen10,https://croma.com/zen10,https://fdn2.gsmarena.com/vv/bigpic/asus-zenfone-10.jpg
+Vivo,Vivo X100,63999,12,256,4.6,gaming,62999,63499,63999,https://amazon.in/x100,https://flipkart.com/x100,https://croma.com/x100,https://fdn2.gsmarena.com/vv/bigpic/vivo-x100.jpg
+Vivo,Vivo V29,32999,8,256,4.3,office,31999,32499,32999,https://amazon.in/v29,https://flipkart.com/v29,https://croma.com/v29,https://fdn2.gsmarena.com/vv/bigpic/vivo-v29.jpg
+Vivo,Vivo T2 5G,18999,8,128,4.1,student,17999,18499,18999,https://amazon.in/vt2,https://flipkart.com/vt2,https://croma.com/vt2,https://fdn2.gsmarena.com/vv/bigpic/vivo-t2-5g.jpg
+Oppo,Oppo Reno 11,28999,8,256,4.3,office,27999,28499,28999,https://amazon.in/reno11,https://flipkart.com/reno11,https://croma.com/reno11,https://fdn2.gsmarena.com/vv/bigpic/oppo-reno11.jpg
+Oppo,Oppo F23 5G,21999,8,256,4.2,student,20999,21499,21999,https://amazon.in/f23,https://flipkart.com/f23,https://croma.com/f23,https://fdn2.gsmarena.com/vv/bigpic/oppo-f23.jpg
+Poco,Poco X6 Pro,26999,8,256,4.3,gaming,25999,26499,26999,https://amazon.in/x6pro,https://flipkart.com/x6pro,https://croma.com/x6pro,https://fdn2.gsmarena.com/vv/bigpic/poco-x6-pro.jpg
+Poco,Poco M6 Pro,14999,6,128,4.1,student,13999,14499,14999,https://amazon.in/m6pro,https://flipkart.com/m6pro,https://croma.com/m6pro,https://fdn2.gsmarena.com/vv/bigpic/poco-m6-pro.jpg
+Sony,Xperia 5 V,84999,8,256,4.5,office,83999,84499,84999,https://amazon.in/xperia5v,https://flipkart.com/xperia5v,https://croma.com/xperia5v,https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-5-v.jpg
+Honor,Honor 90,27999,8,256,4.3,office,26999,27499,27999,https://amazon.in/honor90,https://flipkart.com/honor90,https://croma.com/honor90,https://fdn2.gsmarena.com/vv/bigpic/honor-90.jpg
+Lava,Lava Agni 2,24999,8,256,4.2,student,23999,24499,24999,https://amazon.in/agni2,https://flipkart.com/agni2,https://croma.com/agni2,https://fdn2.gsmarena.com/vv/bigpic/lava-agni-2.jpg
+Infinix,Zero 30 5G,22999,8,256,4.2,student,21999,22499,22999,https://amazon.in/zero30,https://flipkart.com/zero30,https://croma.com/zero30,https://fdn2.gsmarena.com/vv/bigpic/infinix-zero-30.jpg
+Tecno,Camon 20 Pro,19999,8,128,4.1,student,18999,19499,19999,https://amazon.in/camon20,https://flipkart.com/camon20,https://croma.com/camon20,https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-20-pro.jpg
+Nokia,Nokia G42 5G,16999,6,128,4.0,student,15999,16499,16999,https://amazon.in/g42,https://flipkart.com/g42,https://croma.com/g42,https://fdn2.gsmarena.com/vv/bigpic/nokia-g42.jpg
