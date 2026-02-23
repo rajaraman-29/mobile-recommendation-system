@@ -9,7 +9,10 @@
 
 <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
 
-<h2 class="title results-title">Recommended Mobiles 📱</h2>
+<div class="page-title">
+    <h1>Recommended Devices</h1>
+    <p>Carefully matched to your preferences.</p>
+</div>
 
 <form action="/compare" method="post">
 
@@ -18,43 +21,31 @@
 {% for mobile in mobiles %}
 <div class="mobile-card">
 
-    <div class="card-top">
-        <label>
-            <input type="checkbox" name="compare" value="{{ mobile.model }}"> Compare
-        </label>
-
-        {% if loop.index == 1 %}
-            <span class="top-pick">Top Pick ⭐</span>
-        {% endif %}
-    </div>
-
     <img src="{{ mobile.image }}" alt="{{ mobile.model }}"
          onerror="this.src='/static/fallback.png'">
 
-    <h3>{{ mobile.model }}</h3>
+    <h3 class="phone-title">{{ mobile.model }}</h3>
 
     <p class="price">₹{{ mobile.price }}</p>
 
     <p class="specs">
-        RAM: {{ mobile.ram }} GB |
-        Storage: {{ mobile.storage }} GB
+        {{ mobile.ram }}GB RAM • {{ mobile.storage }}GB
     </p>
 
-    <p class="rating">⭐ {{ mobile.rating }}</p>
-
-    <p class="best-price">
-        Best Price: {{ mobile.best_store }} – ₹{{ mobile.best_price }}
-    </p>
-
-    <p class="reason">
-        <strong>Why recommended:</strong> {{ mobile.reason }}
-    </p>
-
-    <div class="buy-links">
-        <a href="{{ mobile.amazon_link }}" target="_blank" class="store-btn amazon">Amazon</a>
-        <a href="{{ mobile.flipkart_link }}" target="_blank" class="store-btn flipkart">Flipkart</a>
-        <a href="{{ mobile.croma_link }}" target="_blank" class="store-btn croma">Croma</a>
+    <div class="rating">
+        ★ {{ mobile.rating }}
     </div>
+
+    <a href="{{ mobile.amazon_link }}" target="_blank" class="store-btn">
+        Buy
+    </a>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox" name="compare" value="{{ mobile.model }}">
+        Compare
+    </label>
 
 </div>
 {% endfor %}
@@ -67,7 +58,9 @@
 
 </form>
 
-<a href="/" class="back-link">⬅ Back to Home</a>
+<div class="back-container">
+    <a href="/" class="back-button">← Back to Home</a>
+</div>
 
 <script>
 function toggleDarkMode() {
